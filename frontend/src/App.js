@@ -6,9 +6,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="Title">Note Trainer by Miguel Padilla</div>
         <img src={logo} className="App-logo" alt="logo" />
-        <ChordDisplay></ChordDisplay>
+        
       </header>
+      <ChordDisplay></ChordDisplay>
     </div>
   );
 }

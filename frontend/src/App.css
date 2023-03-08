@@ -2,9 +2,16 @@
   text-align: center;
 }
 
+.Title {
+  flex-grow: 1;
+  text-align: center;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
+  right:0;
   pointer-events: none;
+  position: absolute;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,15 +21,17 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000000;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
+  
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
+
+
 
 .App-link {
   color: #61dafb;
