@@ -1,8 +1,14 @@
 # NoteTrainer
 Web application that trains users to play different chords, by recognizing correct tone.
 
-This is a work in process, and the purpose is two-fold. Both to help me learn guitar, and to demonstrate my proficiency in React. My goal is to have it continuously recognizing notes, indicating when correct and incorrect notes are played, and generating new chords to play. This will help with arpeggios, which is when you play the three notes in a chord sequentially instead of all at once.
+This program is able to continuously recognize notes, indicating when correct notes are played, and automatically generate new chords to play. 
+This will help with arpeggios, which is when you play the three notes in a chord sequentially instead of all at once.
 
-Thanks for taking a look, and feel free to extend this code for your own purposes!
+Some improvements on my radar for this are:
+-4 and 5 note arpeggios, as well as arpeggios rooted off of guitar strings.
+-Diminished, suspended, and augmented chords.
+-More options for displaying notes, including nashville number system and instrument specific views.
+
+Thanks for taking a look, and feel free to fork this code for your own purposes!
 
 
