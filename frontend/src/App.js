@@ -1,13 +1,12 @@
-import logo from './logo.svg';
+import logo from './musicicon.png';
 import './App.css';
-import ChordTrainer from './components/ChordTrainer';
 import PitchDetectorComponent from './components/PitchDetectorComponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="Title">Note Trainer by Miguel Padilla</div>
+        <div className="Title">Miguel Padilla's Note Trainer</div>
         <img src={logo} className="App-logo" alt="logo" />
         
       </header>

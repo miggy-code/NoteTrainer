@@ -16,9 +16,21 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: none; /* Disable the spinning animation */
+    transform-style: preserve-3d;
+    animation: App-logo-rotate infinite 20s linear;
   }
 }
+
+@keyframes App-logo-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
 
 .App-header {
   background-color: #000000;

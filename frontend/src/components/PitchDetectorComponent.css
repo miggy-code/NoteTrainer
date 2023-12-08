@@ -1,0 +1,27 @@
+.pd-display {
+    background-color: #343A40;
+    padding-bottom: 10em;
+    overflow: hidden;
+  }
+  
+  .pd-display > button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #2F2D2E;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 0.3em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .pd-display button:nth-child(3):hover {
+    background-color: #ffcc00; 
+  }
+  
+  .pd-display button:nth-child(4):hover {
+    background-color: #ff0000; 
+  }
+  

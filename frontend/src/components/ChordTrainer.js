@@ -19,6 +19,11 @@ const notes = [
 /*Define possible interval structures 
 *key - chord name
 *value - interval structure
+*
+*
+*
+ 'dim':[0,3,6],
+ 'aug':[0,4,8],
 */
 const chordTypes = {
   'major': [0, 4, 7],
@@ -121,14 +126,17 @@ function ChordTrainer({ detectedPitch }) {
           }
         }
       }
+    } else {
+      setDetectedNote(null);
     }
+
   }, [detectedPitch, chord.notes, trainingIndex]);
 
   const getBackgroundColor = (index, trainingIndex) => {
     if (index === trainingIndex) {
-      return 'yellow';
+      return '#F18F01';
     } else if (index < trainingIndex) {
-      return 'green';
+      return '#99C24D';
     } else {
       return 'transparent';
     }
@@ -147,32 +155,46 @@ function ChordTrainer({ detectedPitch }) {
 
   return (
     <div className='chord-trainer'>
-      <div className='chord-info'>
-        <h1 className='chord-type'>{chord.shortName}</h1>
-        <h2 className='chord-fullname'>{chord.fullName}</h2>
-      </div>
-      <div className='notes-container'>
-        {chord.notes.map((note, index) => (
-          <div
-            key={note}
-            className='note-box'
-            style={{
-              backgroundColor: getBackgroundColor(index, trainingIndex),
-            }}
-          >
-            {note}
+      <div style={{ 
+        backgroundColor: '#343A40', 
+        borderRadius: '0 0 10% 10%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '0',
+        minHeight: '15rem',
+        }}>
+        <div className='chord-display'>
+          <div className='chord-info'>
+            <h1 className='chord-type'>{chord.shortName}</h1>
+            <h2 className='chord-fullname'>{chord.fullName}</h2>
           </div>
-        ))}
-      </div>
-      <div className='button-container'>
-        <button onClick={handleNewChord}>New Chord</button>
-        <button onClick={startNoteTraining}>Note Training</button>
-      </div>
+        </div>
+        <div className='notes-container'>
+          {chord.notes.map((note, index) => (
+            <div
+              key={note}
+              className='note-box'
+              style={{
+                backgroundColor: getBackgroundColor(index, trainingIndex),
+              }}
+            >
+              {note}
+            </div>
+          ))}
+        </div>
+        <div className='button-container'>
+          <button onClick={handleNewChord}>New Chord</button>
+          <button onClick={startNoteTraining}>Note Training</button>
+        </div>
+      </div>       
+      
       <div className='detected-note'>
         Detected Note: {detectedNote || 'N/A'}
       </div>
     </div>
   );
+
 
 
 }

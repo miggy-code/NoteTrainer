@@ -1,37 +1,90 @@
+:root {
+  --primary-color: #3c8297;
+  --primary-color-hover: #000000;
+  --secondary-color: rgb(71, 67, 67);
+  --text-color: #FFF;
+  --text-muted-color: #777;
+  --success-color: #99C24D;
+  --warning-color: #F18F01;
+  --bg-color: #048BA8;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
 .chord-trainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  max-width: 100%;
+  padding: 0;
+  padding-bottom: 4rem;
+  border-radius: 0;
+  background-color: #2E4057;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.192), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.chord-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+  background-color: #343A40; 
+  border-radius: 0 0 10% 10%;
+  width: 100%;
+  height:100%;
+  border-bottom: 2px solid white;
 }
 
 .chord-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-
-  margin-bottom: 0rem;
+  border-radius: 10%;
+  background-color: #3c8297;
+  width: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: fit-content;
 }
+
+
 
 .chord-type {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 0rem;
+  overflow: hidden;
+  color: #FFF;
+  margin-top: 1.5rem;
 }
 
 .chord-fullname {
   margin-top: 0rem;
-  font-size: 1rem;
-  color: gray;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: #EEEEEE;
 }
 
 .notes-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  margin-top: 0;
+  flex-wrap: nowrap;
   gap: 1rem;
+  width: 95%;
+  flex-basis: 50%;
+  background-color: transparent;
+  flex-shrink: 0;
+  border-bottom: 2px solid #FFFFFF;
+  overflow: hidden;
 }
 
 .note-box {
@@ -39,45 +92,46 @@
   align-items: center;
   justify-content: center;
   width: 5rem;
-  margin: 0 0 1rem 0;
+  margin: 1rem 1rem 1rem 1rem;
   height: 5rem;
   border-radius: 20%;
-  border: 2px solid black;
-  background-color: white;
-  color: black;
+  border: 2px solid #FFF;
+  background-color: #2E4057;
+  color: #FFFFFF;
   font-size: 2em;
   font-weight: bold;
-  transition: background-color 0.1s linear;
-}
-
-.note-box.green {
-  background-color: green;
-  color: white;
-}
-
-.note-box.yellow {
-  background-color: yellow;
+  flex-shrink: 0;
 }
 
 .button-container {
+  padding-top: 1rem;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 30%;
+  background-color: #343A40;
 }
 
-.button-container>button {
+
+.button-container > button {
   margin: 0 10px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
-  background-color: #007bff;
+  background-color: #2F2D2E;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
+  border-radius: 0.3em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #0069d9;
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 2px
+
 }
 
 .detected-note {
